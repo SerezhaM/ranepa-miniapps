@@ -2,7 +2,7 @@ import re
 from tabulate import tabulate
 from PyPDF2 import PdfFileReader
 
-from request import request_pdf
+from internet import request_pdf
 
 days = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"]
 main_list = []
