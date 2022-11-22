@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Form</title>
+  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_table.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WebSite</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper" id="form_main">
+    <div class="img"></div>
+        <p>--> Расписание ЭМИТ <--</p>
+        <form>
+                <div class="form">
+                    <input id="kurs" class="name" type="text" required="">
+                    <label>Курс</label>
+                </div>
+                <div class="form">
+                    <input id="group" class="password" type="text" required="">
+                    <label>Группа</label>
+                </div>
+            <input class="btn" id="btn" type="button" onclick="values_take();" value="Войти">
+        </form>
+    </div>
+<div>
+    <div class="old_ie_wrapper">
+        <div class="fixed_headers" id="table_form">
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script type="text/javascript" src="/eel.js"></script>
+<script>
+  eel.expose(view_table);
+
+  function values_take(){
+    let kurs = document.getElementById("kurs").value;
+    let group = document.getElementById("group").value;
+    eel.start_py(kurs, group);
+  }
+
+  function view_table(table_shedule){
+    document.getElementById('form_main').style.display = "none";
+    document.getElementById('table_form').innerHTML = table_shedule;
+  }
+
+</script>
+<!-- partial -->
+  
+</body>
+</html>
